@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,9 @@
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
   <!-- Styles -->
@@ -18,6 +21,7 @@
   <link rel="stylesheet" href="css/projects.css">
   <link rel="stylesheet" href="css/sections.css">
 </head>
+
 <body>
 
   <!-- Background elements -->
@@ -128,7 +132,7 @@
       </div>
       <div class="projects-list">
 
-        
+
 
         <div class="project-card reveal">
           <div>
@@ -241,44 +245,53 @@
       <div class="contact-layout">
         <div class="contact-left reveal">
           <h2>Hablemos<br>de tu<br><span>proyecto.</span></h2>
-          <p>Disponible para trabajo freelance, proyectos remotos y posiciones de tiempo completo. Respondo en menos de 24h.</p>
+          <p>Disponible para trabajo freelance, proyectos remotos y posiciones de tiempo completo. Respondo en menos de
+            24h.</p>
         </div>
-        <div class="contact-links reveal">
-          <a href="mailto:jor2131100709@gmail.com" class="contact-link">
-            <div class="contact-link-left">
-              <div class="contact-icon">✉</div>
-              <div>
-                <div class="contact-link-label">Email</div>
-                <div class="contact-link-value">jor2131100709@gmail.com</div>
-              </div>
-            </div>
-            <span class="contact-link-arrow">↗</span>
-          </a>
-          <a href="https://github.com/JesusOrz" target="_blank" class="contact-link">
-            <div class="contact-link-left">
-              <div class="contact-icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
-                </svg>
-              </div>
-              <div>
-                <div class="contact-link-label">GitHub</div>
-                <div class="contact-link-value">github.com/JesusOrz</div>
-              </div>
-            </div>
-            <span class="contact-link-arrow">↗</span>
-          </a>
-          <a href="https://www.linkedin.com/in/jesus-ortiz-romero-838b482b8/" target="_blank" class="contact-link">
-            <div class="contact-link-left">
-              <div class="contact-icon">in</div>
-              <div>
-                <div class="contact-link-label">LinkedIn</div>
-                <div class="contact-link-value">linkedin.com/in/jesus-ortiz-romero</div>
-              </div>
-            </div>
-            <span class="contact-link-arrow">↗</span>
-          </a>
-        </div>
+<div class="contact-links reveal">
+
+  <!-- FORMULARIO -->
+  <form id="contact-form" class="contact-form">
+    <div class="form-group">
+      <input type="text" name="name" required>
+      <label>Tu nombre</label>
+    </div>
+
+    <div class="form-group">
+      <input type="email" name="email" required>
+      <label>Tu correo</label>
+    </div>
+
+    <div class="form-group">
+      <textarea name="message" rows="4" required></textarea>
+      <label>Tu mensaje</label>
+    </div>
+
+    <button type="submit" class="btn-send">
+      <span>Enviar mensaje</span>
+    </button>
+
+    <p id="form-status"></p>
+  </form>
+
+  <!-- ICONOS -->
+  <div class="contact-icons">
+
+    <a href="mailto:jor2131100709@gmail.com" class="icon-link" title="Email">
+      <i class="bi bi-envelope"></i>
+    </a>
+
+    <a href="https://github.com/JesusOrz" target="_blank" class="icon-link" title="GitHub">
+      <i class="bi bi-github"></i>
+    </a>
+
+    <a href="https://www.linkedin.com/in/jesus-ortiz-romero-838b482b8/" target="_blank" class="icon-link" title="LinkedIn">
+      <i class="bi bi-linkedin"></i>
+    </a>
+
+  </div>
+
+</div>
       </div>
     </div>
   </section>
@@ -292,5 +305,29 @@
   <!-- Scripts -->
   <script src="js/main.js"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  <script>
+    (function () {
+      emailjs.init("w-0uoXmzcftBKQKez");
+    })();
+
+    document.getElementById("contact-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const status = document.getElementById("form-status");
+      status.innerHTML = "Enviando... ⏳";
+
+      emailjs.sendForm("service_4vcq3s5", "template_2k38cei", this)
+        .then(function () {
+          status.innerHTML = "Mensaje enviado correctamente ✅";
+        }, function (error) {
+          status.innerHTML = "Error al enviar ❌";
+          console.log(error);
+        });
+    });
+  </script>
+
 </body>
+
 </html>
