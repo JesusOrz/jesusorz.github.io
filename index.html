@@ -248,50 +248,51 @@
           <p>Disponible para trabajo freelance, proyectos remotos y posiciones de tiempo completo. Respondo en menos de
             24h.</p>
         </div>
-<div class="contact-links reveal">
+        <div class="contact-links reveal">
 
-  <!-- FORMULARIO -->
-  <form id="contact-form" class="contact-form">
-    <div class="form-group">
-      <input type="text" name="name" required>
-      <label>Tu nombre</label>
-    </div>
+          <!-- FORMULARIO -->
+          <form id="contact-form" class="contact-form">
+            <div class="form-group">
+              <input type="text" name="name" required>
+              <label>Tu nombre</label>
+            </div>
 
-    <div class="form-group">
-      <input type="email" name="email" required>
-      <label>Tu correo</label>
-    </div>
+            <div class="form-group">
+              <input type="email" name="email" required>
+              <label>Tu correo</label>
+            </div>
 
-    <div class="form-group">
-      <textarea name="message" rows="4" required></textarea>
-      <label>Tu mensaje</label>
-    </div>
+            <div class="form-group">
+              <textarea name="message" rows="4" required></textarea>
+              <label>Tu mensaje</label>
+            </div>
 
-    <button type="submit" class="btn-send">
-      <span>Enviar mensaje</span>
-    </button>
+            <button type="submit" class="btn-send">
+              <span>Enviar mensaje</span>
+            </button>
 
-    <p id="form-status"></p>
-  </form>
+            <p id="form-status"></p>
+          </form>
 
-  <!-- ICONOS -->
-  <div class="contact-icons">
+          <!-- ICONOS -->
+          <div class="contact-icons">
 
-    <a href="mailto:jor2131100709@gmail.com" class="icon-link" title="Email">
-      <i class="bi bi-envelope"></i>
-    </a>
+            <a href="mailto:jor2131100709@gmail.com" class="icon-link" title="Email">
+              <i class="bi bi-envelope"></i>
+            </a>
 
-    <a href="https://github.com/JesusOrz" target="_blank" class="icon-link" title="GitHub">
-      <i class="bi bi-github"></i>
-    </a>
+            <a href="https://github.com/JesusOrz" target="_blank" class="icon-link" title="GitHub">
+              <i class="bi bi-github"></i>
+            </a>
 
-    <a href="https://www.linkedin.com/in/jesus-ortiz-romero-838b482b8/" target="_blank" class="icon-link" title="LinkedIn">
-      <i class="bi bi-linkedin"></i>
-    </a>
+            <a href="https://www.linkedin.com/in/jesus-ortiz-romero-838b482b8/" target="_blank" class="icon-link"
+              title="LinkedIn">
+              <i class="bi bi-linkedin"></i>
+            </a>
 
-  </div>
+          </div>
 
-</div>
+        </div>
       </div>
     </div>
   </section>
@@ -316,13 +317,17 @@
       e.preventDefault();
 
       const status = document.getElementById("form-status");
-      status.innerHTML = "Enviando... ⏳";
+      status.innerHTML = "Enviando...";
 
       emailjs.sendForm("service_4vcq3s5", "template_2k38cei", this)
-        .then(function () {
-          status.innerHTML = "Mensaje enviado correctamente ✅";
-        }, function (error) {
-          status.innerHTML = "Error al enviar ❌";
+        .then(() => {
+          status.innerHTML = "Gracias por tu mensaje! 😊 Me pondré en contacto contigo pronto.";
+          status.className = "form-status success";
+          this.reset();
+        })
+        .catch((error) => {
+          status.innerHTML = "Error al enviar el mensaje. Inténtalo más tarde.";
+          status.className = "form-status error";
           console.log(error);
         });
     });
