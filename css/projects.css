@@ -1,0 +1,123 @@
+/* ════════════════════════════════
+   PROJECTS SECTION
+   ════════════════════════════════ */
+
+#projects {
+  padding: 120px 0;
+  border-top: 1px solid var(--border);
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.project-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 48px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 40px;
+  align-items: start;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+}
+
+.project-card::after {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--accent), var(--accent2));
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  background: var(--surface2);
+  transform: translateX(4px);
+}
+
+.project-card:hover::after {
+  transform: scaleY(1);
+}
+
+.project-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.project-title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+.project-desc {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 24px;
+  max-width: 600px;
+}
+
+.project-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 24px;
+}
+
+.project-features li {
+  font-size: 0.85rem;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.project-features li::before {
+  content: '→';
+  color: var(--accent);
+  font-family: 'DM Mono', monospace;
+}
+
+.project-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.stack-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  padding: 4px 10px;
+  border: 1px solid rgba(0,229,255,0.2);
+  color: var(--accent);
+  letter-spacing: 0.08em;
+  background: rgba(0,229,255,0.04);
+}
+
+.project-arrow {
+  font-size: 1.5rem;
+  color: var(--border);
+  transition: all 0.3s;
+  padding-top: 4px;
+  font-family: 'DM Mono', monospace;
+}
+
+.project-card:hover .project-arrow {
+  color: var(--accent);
+  transform: translate(4px, -4px);
+}

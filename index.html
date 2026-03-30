@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jesús Ortiz Romero — Desarrollador Web</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/skills.css">
+  <link rel="stylesheet" href="css/projects.css">
+  <link rel="stylesheet" href="css/sections.css">
+</head>
+<body>
+
+  <!-- Background elements -->
+  <div class="grid-bg"></div>
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <!-- Sections -->
+  <!-- NAV -->
+  <div class="scroll-line" id="scrollLine"></div>
+  <nav>
+    <div class="nav-logo">J.ORTIZ</div>
+    <ul class="nav-links">
+      <li><a href="#skills">Habilidades</a></li>
+      <li><a href="#projects">Proyectos</a></li>
+      <li><a href="#experience">Experiencia</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-inner">
+      <div class="status-badge">
+        <span class="status-dot"></span>
+        Disponible para nuevas oportunidades
+      </div>
+      <div class="hero-label">Desarrollador Web Full Stack Jr.</div>
+      <h1 class="hero-name">
+        Jesús<br>
+        <span>Ortiz</span><br>
+        Romero.
+      </h1>
+      <p class="hero-desc">
+        Especializado en backend y frontend, construyo aplicaciones modernas, seguras y escalables.
+        De la lógica del servidor al píxel perfecto en pantalla.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">Ver proyectos →</a>
+        <a href="#contact" class="btn-ghost">Contactar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-num">01</span>
+        <h2 class="section-title">Habilidades</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card reveal">
+          <div class="skill-cat">Lenguajes</div>
+          <h3>Programación</h3>
+          <div class="skill-tags">
+            <span class="tag">PHP</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Python</span>
+            <span class="tag">SQL</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-cat">Frameworks</div>
+          <h3>Tecnologías Web</h3>
+          <div class="skill-tags">
+            <span class="tag">Laravel</span>
+            <span class="tag">CodeIgniter 4</span>
+            <span class="tag">Bootstrap</span>
+            <span class="tag">jQuery</span>
+            <span class="tag">AJAX</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-cat">Datos</div>
+          <h3>Bases de Datos</h3>
+          <div class="skill-tags">
+            <span class="tag">MySQL</span>
+            <span class="tag">Store Procedures</span>
+            <span class="tag">Triggers</span>
+            <span class="tag">APIs REST</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-cat">DevOps</div>
+          <h3>Sistemas</h3>
+          <div class="skill-tags">
+            <span class="tag">Linux Debian/Ubuntu</span>
+            <span class="tag">MikroTik</span>
+            <span class="tag">Redes</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Git & GitHub</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-num">02</span>
+        <h2 class="section-title">Proyectos</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="projects-list">
+
+        
+
+        <div class="project-card reveal">
+          <div>
+            <div class="project-num">PROYECTO — 01</div>
+            <h3 class="project-title">Sistema de Gestión Escolar</h3>
+            <p class="project-desc">
+              Plataforma web completa para administración educativa: alumnos, docentes, materias
+              y calificaciones. Sistema robusto con control de acceso por roles.
+            </p>
+            <ul class="project-features">
+              <li>Autenticación multi-rol (admin, docente, alumno)</li>
+              <li>Gestión completa de datos académicos</li>
+              <li>Interfaz moderna y responsiva</li>
+            </ul>
+            <div class="project-stack">
+              <span class="stack-tag">CodeIgniter 4</span>
+              <span class="stack-tag">Bootstrap</span>
+              <span class="stack-tag">MySQL</span>
+              <span class="stack-tag">PHP</span>
+            </div>
+          </div>
+          <div class="project-arrow">↗</div>
+        </div>
+
+        <div class="project-card reveal">
+          <div>
+            <div class="project-num">PROYECTO — 02</div>
+            <h3 class="project-title">Sistema de Registro de Actividades</h3>
+            <p class="project-desc">
+              Aplicación web para registro y seguimiento de actividades con generación automática
+              de folios únicos y almacenamiento estructurado. Trazabilidad completa de cada proceso.
+            </p>
+            <div class="project-stack">
+              <span class="stack-tag">PHP</span>
+              <span class="stack-tag">MySQL</span>
+              <span class="stack-tag">JavaScript</span>
+              <span class="stack-tag">AJAX</span>
+            </div>
+          </div>
+          <div class="project-arrow">↗</div>
+        </div>
+
+
+        <div class="project-card reveal">
+          <div>
+            <div class="project-num">PROYECTO — 03</div>
+            <h3 class="project-title">Sistema de Diagnóstico de Redes con IA</h3>
+            <p class="project-desc">
+              Sistema inteligente que analiza logs de routers MikroTik en tiempo real, utilizando
+              inteligencia artificial para detectar fallas de red y generar recomendaciones automáticas.
+            </p>
+            <div class="project-stack">
+              <span class="stack-tag">Laravel</span>
+              <span class="stack-tag">IA APIs</span>
+              <span class="stack-tag">MikroTik API</span>
+              <span class="stack-tag">Git & GitHub</span>
+              <span class="stack-tag">MySQL</span>
+            </div>
+          </div>
+          <div class="project-arrow">↗</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-num">03</span>
+        <h2 class="section-title">Experiencia</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="exp-grid">
+        <div class="exp-item reveal">
+          <div class="exp-icon"><i class="bi bi-gear"></i></div>
+          <h3>Automatización</h3>
+          <p>Desarrollo de procesos automáticos que reducen trabajo manual y mejoran la eficiencia operativa.</p>
+        </div>
+        <div class="exp-item reveal">
+          <div class="exp-icon"><i class="bi bi-lock"></i></div>
+          <h3>Seguridad</h3>
+          <p>Implementación de buenas prácticas de seguridad informática en aplicaciones web y sistemas.</p>
+        </div>
+        <div class="exp-item reveal">
+          <div class="exp-icon"><i class="bi bi-diagram-3"></i></div>
+          <h3>Integraciones</h3>
+          <p>Conexión con servicios externos mediante APIs REST, gestionando autenticación y manejo de datos.</p>
+        </div>
+        <div class="exp-item reveal">
+          <div class="exp-icon"><i class="bi bi-clipboard2-check"></i></div>
+          <h3>Soluciones</h3>
+          <p>Desarrollo de sistemas a medida enfocados en resolver problemas reales con tecnología moderna.</p>
+        </div>
+      </div>
+      <div class="objective-box reveal">
+        <p>
+          Busco oportunidades como desarrollador web donde pueda aplicar mis conocimientos en
+          desarrollo, seguridad y optimización de sistemas, contribuyendo a equipos que valoren
+          la calidad del código y el impacto real del software.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-layout">
+        <div class="contact-left reveal">
+          <h2>Hablemos<br>de tu<br><span>proyecto.</span></h2>
+          <p>Disponible para trabajo freelance, proyectos remotos y posiciones de tiempo completo. Respondo en menos de 24h.</p>
+        </div>
+        <div class="contact-links reveal">
+          <a href="mailto:jor2131100709@gmail.com" class="contact-link">
+            <div class="contact-link-left">
+              <div class="contact-icon">✉</div>
+              <div>
+                <div class="contact-link-label">Email</div>
+                <div class="contact-link-value">jor2131100709@gmail.com</div>
+              </div>
+            </div>
+            <span class="contact-link-arrow">↗</span>
+          </a>
+          <a href="https://github.com/JesusOrz" target="_blank" class="contact-link">
+            <div class="contact-link-left">
+              <div class="contact-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                </svg>
+              </div>
+              <div>
+                <div class="contact-link-label">GitHub</div>
+                <div class="contact-link-value">github.com/JesusOrz</div>
+              </div>
+            </div>
+            <span class="contact-link-arrow">↗</span>
+          </a>
+          <a href="https://www.linkedin.com/in/jesus-ortiz-romero-838b482b8/" target="_blank" class="contact-link">
+            <div class="contact-link-left">
+              <div class="contact-icon">in</div>
+              <div>
+                <div class="contact-link-label">LinkedIn</div>
+                <div class="contact-link-value">linkedin.com/in/jesus-ortiz-romero</div>
+              </div>
+            </div>
+            <span class="contact-link-arrow">↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-left">© 2025 J.Ortiz — Todos los derechos reservados</div>
+    <div class="footer-right">Construido con <span>pasión</span> y mucho café ☕</div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
